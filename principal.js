@@ -24,4 +24,24 @@ const productos = [
 
             console.log("Producto: " , producto.nombre, "- Precio: $", producto.precio)
     })
+
+    //Parte 2: Métodos de transformación y filtrado
+    console.log("4. Obtener solo los nombres con .map():")
     
+    const nombreProductos = productos.map(producto => producto.nombre);
+    console.log(nombreProductos);
+
+    console.log("5. Filtrar por categoría con .filter():")
+
+    const ropaProductos = productos.filter(producto => producto.categoria ===  "Ropa");
+    console.log(ropaProductos )
+
+    console.log("6. Filtrar por precio con .filter():")
+
+    const mayorA = productos.filter(producto => producto.precio > 3000)
+    console.log(mayorA)
+
+    console.log("7. Buscar un producto específico con .find():")
+    const encontrarObjeto = productos.find(producto => producto.nombre === "Gorra")
+    console.log(encontrarObjeto)
+
