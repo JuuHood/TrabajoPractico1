@@ -48,12 +48,39 @@ const productos = [
 //Parte 3: Métodos de validación
 
 console.log("8. Verificar con .some():")
-
 const existe = productos.some(producto =>producto.precio > 10000 )
 console.log( "Existe algun producto con precio mayor a 10.000?: ", existe)
 
+console.log("9. Verificar con .every():")
 const todos = productos.every(producto => producto.precio > 1000)
 console.log("Todos los producto cuestan mas de 1000? : ", todos)
 
+console.log("10. Verificar existencia con .includes():")
 const incluye = nombreProductos.includes("campera")
 console.log("¿El array de nombres contiene 'Campera'? " ,incluye )
+
+// Parte 4:
+
+console.log("11. Ordenar con .sort():")
+//Ordená los productos por precio de menor a mayor.
+const ordenados = productos.sort((a,b) => a.precio - b.precio);
+console.log("Productos ordenados por precio de menor a mayor", ordenados)
+
+console.log("12. Generar mensajes personalizados con .map():")
+
+const mensajes = productos.map(p => 
+    `El producto ${p.nombre} cuesta $${p.precio} y pertenece a la categoría ${p.categoria}.`
+  );
+ console.log(mensajes)
+
+
+
+console.log("13. Agregar productos con spread")
+
+const nuevosProductos = [
+    { id: 6, nombre: "Bata", precio: 2300, categoria: "Ropa" },
+    { id: 7, nombre: "Tacones", precio: 3000, categoria: "Calzado" }
+  ];
+
+  const todosLosProductos = [productos, ...nuevosProductos];
+console.log("Array combinado :", todosLosProductos);
