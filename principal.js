@@ -44,4 +44,16 @@ const productos = [
     console.log("7. Buscar un producto específico con .find():")
     const encontrarObjeto = productos.find(producto => producto.nombre === "Gorra")
     console.log(encontrarObjeto)
+    
+//Parte 3: Métodos de validación
 
+console.log("8. Verificar con .some():")
+
+const existe = productos.some(producto =>producto.precio > 10000 )
+console.log( "Existe algun producto con precio mayor a 10.000?: ", existe)
+
+const todos = productos.every(producto => producto.precio > 1000)
+console.log("Todos los producto cuestan mas de 1000? : ", todos)
+
+const incluye = nombreProductos.includes("campera")
+console.log("¿El array de nombres contiene 'Campera'? " ,incluye )
